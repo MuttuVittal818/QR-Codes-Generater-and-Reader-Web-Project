@@ -42,12 +42,15 @@ uploadElem.addEventListener("click", () => {
 });
 
 uploadImgInput.addEventListener("change", (e) => {
+  document.getElementById("clear-logo").classList.remove("active"); //
   const file = e.target.files[0];
+  if (!file) return; //
   const reader = new FileReader();
   reader.readAsDataURL(file);
   reader.onload = () => {
-    img = uploadImgInput.nextSibling.nextSibling;
-    img.src = reader.result;
+    //img = uploadImgInput.nextSibling.nextSibling;
+    //img.src = reader.result;
+    uploadImgInput.nextSibling.nextSibling.src = reader.result;
     generateQRCode();
   };
 });
@@ -139,7 +142,7 @@ function generateQrCode() {
   qrCode = new QRCodeStyling({
     width: width.value,
     height: height.value,
-    data: data?.value || "welcome to hashtech",
+    data: data?.value || "This Project developed by Muttu Handigund ",
     margin: 10,
     type: "canvas",
     image: image?.src || null,

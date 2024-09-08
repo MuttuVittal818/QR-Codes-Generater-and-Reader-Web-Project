@@ -843,7 +843,7 @@
               function defineProperty() {
                 var credits = document.createElement("div");
                 credits.innerHTML =
-                  "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
+                  "A Project By <a href='http://www.linkedin.com/in/muttu-handigund' target=_blank>Muttu-Handigund</a>";
                 credits.style.position = "absolute";
                 credits.style.bottom = "0";
                 credits.style.right = "0";
